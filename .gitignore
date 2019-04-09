@@ -7,5 +7,6 @@
 #No ignorar archivos .cpp
 !*.cpp
 
-#No ignorar .gitignore
+#No ignorar .gitignore ni readme
 !.gitignore
+!README.md
