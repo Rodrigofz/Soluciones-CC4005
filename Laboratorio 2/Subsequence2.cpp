@@ -18,6 +18,7 @@ int main(){
             maximo[n]=maximo[n-1];
             maximo[n-1]=-2;
         }
+        
         else{
             subsecuencia[i] = actual;
             maximo[n] = actual;
