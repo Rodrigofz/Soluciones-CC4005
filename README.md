@@ -7,3 +7,8 @@
 
 ### Laboratorio 2:
 -Subsequence funcional. El archivo es Subsequence3.cpp
+
+---
+
+### Laboratorio 3:
+-AlmostPrime no funcional.
