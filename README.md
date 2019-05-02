@@ -11,4 +11,3 @@
 ---
 
 ### Laboratorio 3:
--AlmostPrime no funcional.
