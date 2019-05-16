@@ -1,8 +1,7 @@
-continents.cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int main{
+int main(){
 	int M,N;
 	cin>>M>>N;
 	map<int, int> mapa;
@@ -10,11 +9,11 @@ int main{
 	int count_continent = 1;
 	for(int i=1; i<M+1; i++){
 		string line;
-		getline(cin, line);
+		cin>>line;
 
-		for(int j=1; j<N+1; j++){
-			char c = line[j];
-			if(c == "w"){
+		for(int k=0; k<N; k++){
+			int j = k+1;
+			if(line[j] == 'w'){
 				world[i][j] = 0;
 			}
 			else{
@@ -40,7 +39,10 @@ int main{
 		}
 	}
 
-	cout<<world[2][2];
-
-
+	for(int i=1; i<M+1; i++){
+		for(int j=1; j<N+1; j++){
+			cout<<world[i][j]<<"\t";
+		}
+		cout<<"\n";
+	}
 }
