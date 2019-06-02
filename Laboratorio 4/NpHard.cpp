@@ -56,15 +56,20 @@ int main(){
     cout<<"\n";
 
     cout<<counters[1]<<"\n";
+<<<<<<< HEAD
     
+=======
+    int j = 1;
+>>>>>>> 47b53f0944d897a3471e2343576a9aca31729d37
     for(map<int, int>::iterator it=colors.begin(); it!=colors.end(); ++it){
 		pair<int, int> tuple=*it;
         if(tuple.second == 2){
-            cout<<tuple.first<<" ";
+            cout<<tuple.first;
         }
+        if(j!=counters[1]){
+            cout<<" ";
+        }
+        j++;
 	}
-    
-    cout<<"\n";
-
 
 }

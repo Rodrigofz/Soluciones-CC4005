@@ -11,3 +11,7 @@
 ---
 
 ### Laboratorio 3:
+
+---
+### Laboratorio 4:
+-NPHard no funcional.
