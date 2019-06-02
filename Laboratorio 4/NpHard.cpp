@@ -44,7 +44,7 @@ int main(){
         return 0;
     }
     vector<int> others;
-    cout<<"Counter 1: "<<counters[0]<<"\n";
+    cout<<counters[0]<<"\n";
     
     for(map<int, int>::iterator it=colors.begin(); it!=colors.end(); ++it){
 		pair<int, int> tuple=*it;
@@ -55,7 +55,7 @@ int main(){
     
     cout<<"\n";
 
-    cout<<"Counter 2: "<<counters[1]<<"\n";
+    cout<<counters[1]<<"\n";
     
     for(map<int, int>::iterator it=colors.begin(); it!=colors.end(); ++it){
 		pair<int, int> tuple=*it;
