@@ -46,19 +46,21 @@ int main(){
             cin>>a>>b>>w;
 
             graph[a].push_back(pair<int, int>(w, b));
-            cout<<graph[a].size()<<"\n"<<graph.size()<<"\n";
         }
-
+        cout<<"hola\n";
         Dijsktra(s, graph, dists, p);
         int shortDist= dists[dest];
         int var=shortDist;
         while(var==shortDist){
-            int i = p[dest];
+            cout<<"a\n";
+            int i = dest;
             while (p[i]!=0){
-                graph[i].clear();
-
+                cout<<i<<"\n";
                 i = p[i];
+                graph[i].clear();
             } 
+            dists=vector<long long>(n+1,LLONG_MAX);
+            p=vector<int> (n+1,0);
             Dijsktra(s, graph, dists, p);
             int var=dists[dest];
         }
