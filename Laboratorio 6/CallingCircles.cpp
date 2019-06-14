@@ -43,6 +43,7 @@ void tarjan(int u){
 
 int main(){
     int n, m;
+    int ronda = 1;
     while(cin>>n>>m){
         if(n==0 && m==0){
             break;
@@ -57,7 +58,7 @@ int main(){
             cin>>name1>>name2;
             int num1, num2;
             
-            if(name_num[name1]){
+            if(name_num.find(name1) != name_num.end()){
                 num1 = name_num[name1];
             }
             else{
@@ -67,7 +68,7 @@ int main(){
                 counter++;
             }
 
-            if(name_num[name2]){
+            if(name_num.find(name2) != name_num.end()){
                 num2 = name_num[name2];
             }
             else{
@@ -78,7 +79,7 @@ int main(){
             }
             g[num1].push_back(num2);
         } 
-
+        /*
         for(vector<int> v : g){
             cout<<"New vector:\n";
             for(int i : v){
@@ -86,6 +87,7 @@ int main(){
             }
             cout<<"\n";
         }
+        */
 
         G = g;
         tarjan_time = 0;
@@ -101,12 +103,19 @@ int main(){
                 tarjan(u);
 
         int k = 1;
+        cout << "Calling circles for data set "<<ronda<<":\n";
         for(vector<int> &C : SCC)
         {
-            cout << "La " << k++ << "-esima componente conexa es: ";
-            for(int u : C) cout << u << ' ';
-            cout << '\n';
+            for(int i=0; i<C.size(); i++) {
+              int u = C[i];
+              cout << num_name[u];
+              if(i != C.size()-1){
+                cout<<", ";
+              }
+            }
+            cout << "\n";
         }
+        ronda++;
     }
 }
 
